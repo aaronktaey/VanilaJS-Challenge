@@ -1,6 +1,5 @@
 // elements to handle
 const title = document.querySelector("#title");
-const body = document.querySelector("body");
 const colors = ["blue", "red", "orange", "purple"];
 
 // functions to use
