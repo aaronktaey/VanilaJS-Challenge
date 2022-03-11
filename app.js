@@ -1,29 +1,22 @@
-// elements to handle
-const title = document.querySelector("#title");
-const colors = ["blue", "red", "orange", "purple"];
+const body = document.querySelector("body");
+const colors = ["red", "orange", "yellow", "green", "blue", "darkblue", "purple"]
+function handleWindowResize(){
+    const wInnerWidth = window.innerWidth;
+    if(wInnerWidth < 200){
+        body.style.backgroundColor = colors[0];
+    }else if(wInnerWidth < 400){
+        body.style.backgroundColor = colors[1];
+    }else if(wInnerWidth < 600){
+        body.style.backgroundColor = colors[2];
+    }else if(wInnerWidth < 800){
+        body.style.backgroundColor = colors[3];
+    }else if(wInnerWidth < 1000){
+        body.style.backgroundColor = colors[4];
+    }else if(wInnerWidth < 1200){
+        body.style.backgroundColor = colors[5];
+    }else{
+        body.style.backgroundColor = colors[6];
+    }
+}
 
-// functions to use
-const superEventHandler = {
-  handeTitleMouseEnter: function () {
-    title.innerText = "The mouse is here!";
-    title.style.color = colors[0];
-  },
-  handeTitleMouseLeave: function () {
-    title.innerText = "The mouse is gone!";
-    title.style.color = colors[1];
-  },
-  handleDocRightClick: function () {
-    title.innerText = "That was a right click!";
-    title.style.color = colors[2];
-  },
-  handleBrwserResize: function () {
-    title.innerText = "You just resized!";
-    title.style.color = colors[3];
-  },
-};
-
-//events to handle
-title.addEventListener("mouseenter", superEventHandler.handeTitleMouseEnter);
-title.addEventListener("mouseleave", superEventHandler.handeTitleMouseLeave);
-document.addEventListener("contextmenu", superEventHandler.handleDocRightClick);
-window.addEventListener("resize", superEventHandler.handleBrwserResize);
+window.addEventListener("resize", handleWindowResize);
