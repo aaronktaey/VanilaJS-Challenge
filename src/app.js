@@ -1,13 +1,4 @@
 "use strict";
-const clock = document.querySelector("#clock");
-const secondClock = document.querySelector("#secondClock");
-const nameDiv = document.querySelector("#nameDiv");
-const nameInput = document.querySelector("#nameInput");
-const nameButton = document.querySelector("#nameInput");
-const focusDiv = document.querySelector("#focusDiv");
-const focus = document.querySelector("#focus");
-const focusInput = document.querySelector("#focusInput");
-const focusButton = document.querySelector("#focusButton");
 
 const quotesList = [
   {
@@ -23,22 +14,12 @@ const quotesList = [
     author: "Albert Einstein",
   },
   {
-    quote:
-      "Two roads diverged in a wood, and I—I took the one less traveled by, And that has made all the difference.",
-    author: "Robert Frost",
-  },
-  {
     quote: "I attribute my success to this: I never gave or took any excuse.",
     author: "Florence Nightingale",
   },
   {
     quote: "You miss 100% of the shots you don’t take.",
     author: "Wayne Gretzky",
-  },
-  {
-    quote:
-      "I’ve missed more than 9000 shots in my career. I’ve lost almost 300 games. 26 times I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed.",
-    author: "Michael Jordan",
   },
   {
     quote:
@@ -62,11 +43,6 @@ const quotesList = [
     author: "John Lennon",
   },
   { quote: "We become what we think about.", author: "Earl Nightingale" },
-  {
-    quote:
-      "14.Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do, so throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails.  Explore, Dream, Discover.",
-    author: "Mark Twain",
-  },
   {
     quote: "15.Life is 10% what happens to me and 90% of how I react to it.",
     author: "Charles Swindoll",
@@ -110,11 +86,6 @@ const quotesList = [
     quote:
       "You can never cross the ocean until you have the courage to lose sight of the shore.",
     author: "Christopher Columbus",
-  },
-  {
-    quote:
-      "I’ve learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.",
-    author: "Maya Angelou",
   },
   { quote: "Either you run the day, or the day runs you.", author: "Jim Rohn" },
   {
@@ -168,11 +139,6 @@ const quotesList = [
   },
   {
     quote:
-      "When I stand before God at the end of my life, I would hope that I would not have a single bit of talent left and could say, I used everything you gave me.",
-    author: "Erma Bombeck",
-  },
-  {
-    quote:
       "Few things can help an individual more than to place responsibility on him, and to let him know that you trust him.",
     author: "Booker T. Washington",
   },
@@ -202,11 +168,6 @@ const quotesList = [
   {
     quote: "Start where you are. Use what you have.  Do what you can.",
     author: "Arthur Ashe",
-  },
-  {
-    quote:
-      "When I was 5 years old, my mother always told me that happiness was the key to life.  When I went to school, they asked me what I wanted to be when I grew up.  I wrote down ‘happy’.  They told me I didn’t understand the assignment, and I told them they didn’t understand life.",
-    author: "John Lennon",
   },
   { quote: "Fall seven times and stand up eight.", author: "Japanese Proverb" },
   {
@@ -243,11 +204,6 @@ const quotesList = [
     author: "Sheryl Sandberg",
   },
   {
-    quote:
-      "First, have a definite, clear practical ideal; a goal, an objective. Second, have the necessary means to achieve your ends; wisdom, money, materials, and methods. Third, adjust all your means to that end.",
-    author: "Aristotle",
-  },
-  {
     quote: "If the wind will not serve, take to the oars.",
     author: "Latin Proverb",
   },
@@ -274,11 +230,6 @@ const quotesList = [
   {
     quote: "If you want to lift yourself up, lift up someone else.",
     author: "Booker T. Washington",
-  },
-  {
-    quote:
-      "I have been impressed with the urgency of doing. Knowing is not enough; we must apply. Being willing is not enough; we must do.",
-    author: "Leonardo da Vinci",
   },
   {
     quote:
@@ -333,11 +284,6 @@ const quotesList = [
   },
   {
     quote:
-      "It is not what you do for your children, but what you have taught them to do for themselves, that will make them successful human beings.",
-    author: "Ann Landers",
-  },
-  {
-    quote:
       "If you want your children to turn out well, spend twice as much time with them, and half as much money.",
     author: "Abigail Van Buren",
   },
@@ -345,11 +291,6 @@ const quotesList = [
     quote:
       "Build your own dreams, or someone else will hire you to build theirs.",
     author: "Farrah Gray",
-  },
-  {
-    quote:
-      "The battles that count aren’t the ones for gold medals. The struggles within yourself–the invisible battles inside all of us–that’s where it’s at.",
-    author: "Jesse Owens",
   },
   {
     quote: "Education costs money.  But then so does ignorance.",
@@ -363,11 +304,6 @@ const quotesList = [
   {
     quote: "It does not matter how slowly you go as long as you do not stop.",
     author: "Confucius",
-  },
-  {
-    quote:
-      "If you look at what you have in life, you’ll always have more. If you look at what you don’t have in life, you’ll never have enough.",
-    author: "Oprah Winfrey",
   },
   {
     quote:
@@ -450,6 +386,24 @@ const quotesList = [
   { quote: "If you can dream it, you can achieve it.", author: "Zig Ziglar" },
 ];
 
+const clock = document.querySelector("#clock");
+const secondClock = document.querySelector("#secondClock");
+const nameDiv = document.querySelector("#nameDiv");
+const nameInput = document.querySelector("#nameInput");
+const nameButton = document.querySelector("#nameInput");
+const focusDiv = document.querySelector("#focusDiv");
+const focus = document.querySelector("#focus");
+const focusInput = document.querySelector("#focusInput");
+const focusButton = document.querySelector("#focusButton");
+const quotesDiv = document.querySelector("#quotesDiv");
+const quote = document.querySelector("#quote");
+const bgImg = document.querySelector("#backgroundImage");
+const geolocation = navigator.geolocation.getCurrentPosition(
+  successFunction,
+  errorFunction
+);
+const API_KEY = "8bb8f0547c2a832495d78e8793733b17";
+
 function updateClock() {
   const timeNow = new Date();
   const hh =
@@ -464,6 +418,19 @@ function updateClock() {
       : timeNow.getSeconds();
   clock.innerHTML = `${hh}:${mm}`;
   secondClock.innerHTML = ss;
+}
+
+function successFunction(position) {
+  const lat = position.coords.latitude;
+  const long = position.coords.longitude;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_KEY}`;
+}
+function errorFunction(position) {
+  alert("Something went wrong...");
+}
+
+function randomNumberGenerator(range) {
+  return Math.floor(Math.random() * range);
 }
 
 function drawBody() {
@@ -483,17 +450,22 @@ function drawBody() {
   ) {
     focusDiv.innerHTML = `<h3>${localStorageFocus}</h3>`;
   }
-}
 
-function handleFocusButtonCLick() {
-  localStorage.setItem("focus", focusInput.value);
-  console.log("localstorage Saved... : ", focusInput.value);
-  drawBody();
+  const randomQuote = quotesList[randomNumberGenerator(quotesList.length)];
+  quote.innerHTML = `${randomQuote.quote} - ${randomQuote.author} -`;
+
+  bgImg.src = `img/${randomNumberGenerator(9)}.jpg`;
 }
 
 function handleNameButtonClick() {
   localStorage.setItem("name", nameInput.value);
   console.log("localstorage Saved... : ", nameInput.value);
+  drawBody();
+}
+
+function handleFocusButtonCLick() {
+  localStorage.setItem("focus", focusInput.value);
+  console.log("localstorage Saved... : ", focusInput.value);
   drawBody();
 }
 
