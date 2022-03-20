@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="src/style.css">
-</head>
-<body>
-  <div>
-    <h1 id="clock" class="clocks">00:00:00</h1><h3 id="secondClock" class="clocks">00</h3>
-  </div>
-  <div id="nameDiv">
-    <input type="text" placeholder="What is your name?"><button>Aha!</button>
-  </div>
-  <script src="src/app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div>
+      <h1 id="clock" class="clocks">00:00:00</h1>
+      <h3 id="secondClock" class="clocks">00</h3>
+    </div>
+    <div id="nameDiv">
+      <input
+        type="text"
+        id="nameInput"
+        placeholder="What is your name?"
+      /><button id="nameButton">Aha!</button>
+    </div>
+    <div id="focusDiv">
+      <h3 id="focus">What is your main focus today?</h3>
+      <input type="text" id="focusInput" /><button id="focusButton">
+        Good!
+      </button>
+    </div>
+    <div id="quotesDiv">
+      <p id="quote">Quote Here!</p>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
 </html>
