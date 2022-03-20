@@ -10,7 +10,6 @@ function successFunction(position) {
   fetch(url)
     .then((Response) => Response.json())
     .then((data) => {
-      console.log(data);
       const temp = data.main.temp;
       const name = data.name;
       const weather = data.weather[0].main;

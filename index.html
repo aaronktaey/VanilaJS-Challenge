@@ -13,22 +13,27 @@
         <h1 id="clock" class="clocks">00:00:00</h1>
         <h3 id="secondClock" class="clocks">00</h3>
       </div>
-      <div id="nameDiv">
+      <form id="nameForm">
         <input
           type="text"
           id="nameInput"
           placeholder="What is your name?"
         /><button id="nameButton">Aha!</button>
-      </div>
-      <div id="focusDiv">
+      </form>
+      <form id="focusForm">
         <h3 id="focus">What is your main focus today?</h3>
         <input type="text" id="focusInput" /><button id="focusButton">
           Good!
         </button>
-      </div>
-      <div id="todoDiv">
-        <ul id="todoList"></ul>
-      </div>
+      </form>
+      <form id="todo-form">
+        <input
+          type="text"
+          id="todoInput"
+          placeholder="Add todo here..."
+        /><button id="todoButton">Add</button>
+      </form>
+      <ul id="todoList"></ul>
       <div id="quotesDiv">
         <p id="quote">Quote Here!</p>
       </div>
