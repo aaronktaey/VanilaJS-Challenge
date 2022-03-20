@@ -8,43 +8,36 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div id="background">
-      <div>
-        <h1 id="clock" class="clocks">00:00:00</h1>
-        <h3 id="secondClock" class="clocks">00</h3>
-      </div>
-      <form id="nameForm">
-        <input
-          type="text"
-          id="nameInput"
-          placeholder="What is your name?"
-        /><button id="nameButton">Aha!</button>
-      </form>
-      <form id="focusForm">
-        <h3 id="focus">What is your main focus today?</h3>
-        <input type="text" id="focusInput" /><button id="focusButton">
-          Good!
-        </button>
-      </form>
-      <form id="todo-form">
-        <input
-          type="text"
-          id="todoInput"
-          placeholder="Add todo here..."
-        /><button id="todoButton">Add</button>
-      </form>
-      <ul id="todoList"></ul>
-      <div id="quotesDiv">
-        <p id="quote">Quote Here!</p>
-      </div>
-      <div id="weatherDiv">
-        <p id="locationWeather"></p>
-      </div>
-      <!-- <img id="backgroundImage" src="img/1.jpg" alt="img..." /> -->
+    <div class="">
+      <h1 id="clock" class="clocks">00:00:00</h1>
+      <h3 style="margin-top: 117px" id="secondClock" class="clocks">00</h3>
+    </div>
+    <form id="nameForm">
+      <input type="text" id="nameInput" placeholder="What is your name?" />
+    </form>
+    <div></div>
+    <form id="focusForm">
+      <input
+        type="text"
+        id="focusInput"
+        placeholder="What is your main focus today?"
+      />
+    </form>
+    <form id="todo-form">
+      <input type="text" id="todoInput" placeholder="Add todo here..." />
+    </form>
+    <ul id="todoList"></ul>
+    <div id="quotesDiv">
+      <p id="quote">Quote Here!</p>
+    </div>
+    <div id="weatherDiv">
+      <p id="locationWeather"></p>
     </div>
     <script src="src/app.js"></script>
+    <script src="src/clock.js"></script>
     <script src="src/todo.js"></script>
     <script src="src/quotes.js"></script>
+    <script src="src/background.js"></script>
     <script src="src/weather.js"></script>
   </body>
 </html>

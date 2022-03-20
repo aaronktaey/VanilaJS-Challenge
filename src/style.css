@@ -1,11 +1,145 @@
-.clocks {
-  display: inline;
+html,
+body {
+  height: 100%;
 }
 
 html {
+  display: table;
+  margin: auto;
   background: no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+}
+.clocks {
+  display: inline;
+  text-align: center;
+  color: white;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+input {
+  width: 300px;
+  font-family: inherit;
+  border: 0;
+  border-bottom: 2px solid white;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+ul {
+  max-height: 300px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+li {
+  width: 300px;
+  font-family: inherit;
+  border: 0;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  margin: auto;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]::placeholder {
+  text-align: center;
+  color: white;
+}
+
+#clock {
+  font-size: 100px;
+}
+
+#secondClock {
+  font-size: 50px;
+}
+
+h3 {
+  color: white;
+}
+
+p {
+  font-size: 15px;
+  color: white;
+}
+
+span,
+h1 {
+  color: white;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  padding: 3px 10px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  outline: none;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.4s, color 0.4s, border 0.4s;
+  margin-left: 10px;
+  text-align: right;
+}
+
+scroll {
+  height: 300px;
+  width: 40px;
+  overflow-y: scroll;
+  display: inline-block;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(left, #999, #888);
+  -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.8);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(left, #888, #777);
 }
