@@ -8,33 +8,35 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div>
-      <h1 id="clock" class="clocks">00:00:00</h1>
-      <h3 id="secondClock" class="clocks">00</h3>
+    <div id="background">
+      <div>
+        <h1 id="clock" class="clocks">00:00:00</h1>
+        <h3 id="secondClock" class="clocks">00</h3>
+      </div>
+      <div id="nameDiv">
+        <input
+          type="text"
+          id="nameInput"
+          placeholder="What is your name?"
+        /><button id="nameButton">Aha!</button>
+      </div>
+      <div id="focusDiv">
+        <h3 id="focus">What is your main focus today?</h3>
+        <input type="text" id="focusInput" /><button id="focusButton">
+          Good!
+        </button>
+      </div>
+      <div id="todoDiv">
+        <ul id="todoList"></ul>
+      </div>
+      <div id="quotesDiv">
+        <p id="quote">Quote Here!</p>
+      </div>
+      <div id="weatherDiv">
+        <p id="locationWeather"></p>
+      </div>
+      <!-- <img id="backgroundImage" src="img/1.jpg" alt="img..." /> -->
     </div>
-    <div id="nameDiv">
-      <input
-        type="text"
-        id="nameInput"
-        placeholder="What is your name?"
-      /><button id="nameButton">Aha!</button>
-    </div>
-    <div id="focusDiv">
-      <h3 id="focus">What is your main focus today?</h3>
-      <input type="text" id="focusInput" /><button id="focusButton">
-        Good!
-      </button>
-    </div>
-    <div id="todoDiv">
-      <ul id="todoList"></ul>
-    </div>
-    <div id="quotesDiv">
-      <p id="quote">Quote Here!</p>
-    </div>
-    <div id="weatherDiv">
-      <p id="locationWeather"></p>
-    </div>
-    <img id="backgroundImage" src="img/1.jpg" alt="img..." />
     <script src="src/app.js"></script>
     <script src="src/todo.js"></script>
     <script src="src/quotes.js"></script>
