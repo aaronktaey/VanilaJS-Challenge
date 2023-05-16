@@ -1,6 +1,5 @@
 const todoForm = document.querySelector("#todo-form");
 const todoInput = todoForm.querySelector("#todoInput");
-const todoButton = todoForm.querySelector("#todoButton");
 const todoList = document.querySelector("#todoList");
 const todos = [];
 const TODOS_KEY = "todos";
